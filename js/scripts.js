@@ -11,14 +11,12 @@ $(document).ready(function(){
   $("form#to-do").submit(function(event){
     event.preventDefault();
     var toDo = $("#task").val();
-    var priority = $("#priority").val();
+    var priority = $("#drop-down").val();
     var newTask = new Task(toDo, priority);
-    console.log(priority, newTask);
-    console.log(toDo);
+    console.log(priority);
     $("#list").append("<li>" + newTask.priority + " " + newTask.toDo + "</li>");
-
-  $("ul#list").children("li").last().click(function(){
-    $(this).remove();
-   });
+    $("ul#list").children("li").last().click(function(){
+      $(this).remove();
+    });
   });
 });
