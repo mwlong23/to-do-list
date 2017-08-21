@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Raleway');
+li {
+    padding: 14px;
+    margin-bottom: 14px;
+    list-style-type: none;
+    border-radius: 6px;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: #427A82;
+  color: white;
+}
+.glyphicon{
+  float: right;
+}
+h1{
+  font-family: 'Baloo Bhaijaan', cursive;
+}
+
+p, li, label{
+font-family: 'Raleway', sans-serif;
+}
