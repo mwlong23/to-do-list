@@ -3,7 +3,19 @@ function Task(toDo, priority) {
   this.toDo = toDo;
   this.priority = priority;
 }
-
+function priorityContext (priority){
+  switch( priority){
+    case "high":
+      return "bg-danger";
+      break;
+    case "medium":
+      return "bg-warning";
+      break;
+    case "low":
+      return "bg-info";
+      break;
+  };
+};
 
 
 // UI logic
@@ -13,8 +25,9 @@ $(document).ready(function(){
     var toDo = $("#task").val();
     var priority = $("#drop-down").val();
     var newTask = new Task(toDo, priority);
+    var context = priorityContext(priority);
     console.log(priority);
-    $("#list").append("<li>" + newTask.priority + " " + newTask.toDo + "</li>");
+    $("#list").append('<li class=' + context + '>' + newTask.priority + " " + newTask.toDo + "</li>");
     $("ul#list").children("li").last().click(function(){
       $(this).remove();
     });
