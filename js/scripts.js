@@ -15,6 +15,10 @@ $(document).ready(function(){
     var newTask = new Task(toDo, priority);
     console.log(priority, newTask);
     console.log(toDo);
-    $("#list").append("<li>" + newTask.toDo + " " + newTask.priority + "</li>");
+    $("#list").append("<li>" + newTask.priority + " " + newTask.toDo + "</li>");
+
+  $("ul#list").children("li").last().click(function(){
+    $(this).remove();
+   });
   });
 });
